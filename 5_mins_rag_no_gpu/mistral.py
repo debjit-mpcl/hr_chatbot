@@ -152,7 +152,7 @@ with st.sidebar:
     # Option for using an existing vector store
     use_existing_vector_store = st.radio("Use existing vector store if available", ["Yes", "No"], horizontal=True)
 # Path to the vector store file
-vector_store_path = "vectorstore.pkl"
+vector_store_path = "5_mins_rag_no_gpu/vectorstore.pkl"
 
 
 
@@ -181,8 +181,6 @@ else:
                 with open(vector_store_path, "wb") as f:
                     pickle.dump(vectorstore, f)
             st.success("Vector store created and saved.")
-        else:
-            st.warning("No documents available to process!", icon="⚠️")
 
 ############################################
 # Component #4 - LLM Response Generation and Chat
