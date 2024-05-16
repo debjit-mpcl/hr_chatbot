@@ -53,7 +53,7 @@ chat_history_df=pd.read_excel('5_mins_rag_no_gpu/chat_history.xlsx')
 
 def delete_chat_history():
     chat_history_df.drop([i for i in range(1,len(chat_history_df))],axis=0,inplace=True)
-    chat_history_df.to_excel('chat_history.xlsx', index=False)
+    chat_history_df.to_excel('5_mins_rag_no_gpu/chat_history.xlsx', index=False)
     st.session_state.messages=[]
     ss.chat_history=[]
 with st.sidebar:
