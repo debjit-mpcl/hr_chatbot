@@ -67,7 +67,7 @@ with st.sidebar:
     with st.form("my-form", clear_on_submit=True):
         uploaded_files = st.file_uploader("Upload a file to the Knowledge Base:", accept_multiple_files = True)
         #submitted = st.form_submit_button("Upload!")
-        pass
+        
 
     if uploaded_files and submitted:
         for uploaded_file in uploaded_files:
