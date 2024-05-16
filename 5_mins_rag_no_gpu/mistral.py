@@ -100,7 +100,7 @@ def common_questions():
         ss.chat_history.extend([HumanMessage(content=user_input),answer])
         index=len(chat_history_df)
         chat_history_df.loc[index]=[user_input,answer]
-        chat_history_df.to_excel('chat_history.xlsx', index=False)
+        chat_history_df.to_excel('5_mins_rag_no_gpu/chat_history.xlsx', index=False)
         st.session_state['past'].append(user_input)
         st.session_state['generated'].append(answer)
         with st.chat_message('assiatant'):
@@ -285,7 +285,7 @@ if user_input and vectorstore!=None:
         st.session_state['generated'].append(full_response)
         message_placeholder.markdown(full_response)
     st.session_state.messages.append({"role": "assistant", "content": full_response})
-    chat_history_df.to_excel('chat_history.xlsx', index=False)
+    chat_history_df.to_excel('5_mins_rag_no_gpu/chat_history.xlsx', index=False)
     ss.common_ques=False
 if(ss.common_ques==True):
     common_questions()
