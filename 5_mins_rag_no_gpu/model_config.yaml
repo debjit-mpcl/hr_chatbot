@@ -1,0 +1,4 @@
+engine:
+  model: /Mistral-7B-Instruct-v0.2/
+  tensor_parallel_size: 1
+  dtype: float16
