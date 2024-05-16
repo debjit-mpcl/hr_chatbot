@@ -31,7 +31,7 @@ os.environ['NVIDIA_API_KEY']='nvapi-Ci4Nx_n_rVnDHB5RWEoQzNt4KTNeaFItW5p1jm9uOGwY
 
 st.set_page_config(layout = "wide")
 
-question_df=pd.read_csv('./question_list.csv')
+question_df=pd.read_csv('5_mins_rag_no_gpu/question_list.csv')
 group=question_df.groupby('Category').groups.keys()
 question_list={}
 for k in group:
@@ -49,7 +49,7 @@ def get_chat_history():
         st.session_state.messages.append({"role": "user", "content": question})
         st.session_state.messages.append({"role": "assistant", "content": answer})
         ss.chat_history.extend([HumanMessage(content=question),answer])
-chat_history_df=pd.read_excel('./chat_history.xlsx')
+chat_history_df=pd.read_excel('5_mins_rag_no_gpu/chat_history.xlsx')
 
 def delete_chat_history():
     chat_history_df.drop([i for i in range(1,len(chat_history_df))],axis=0,inplace=True)
