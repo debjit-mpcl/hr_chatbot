@@ -229,8 +229,8 @@ contextualize_q_prompt = ChatPromptTemplate.from_messages(
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
 qa_system_prompt = """You are a helpful AI assistant named HR Sarathi. You will reply to questions only based on documents given to you \
-and the history of the current session chat else decline to answer. \
-If the document does not conatin information for the question, politely decline to answer. \
+and the history else naturally decline to answer. \
+If the document does not conatin information for the question, naturally decline to answer. \
 You will not  mention the phrases similar to "assuming the context" or "assist". \
 Never include "[Assuming the context is]" in your response. \
 Never include "As a helpful AI assistant, I will answer your question based on the provided document." \
